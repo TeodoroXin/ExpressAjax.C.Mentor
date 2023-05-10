@@ -1,0 +1,28 @@
+body {
+	/* background: #E9ECF4; */
+  color: #000;
+  font-family: 'Style Script', cursive;
+  font-size: 18px;
+}
+table {
+	background-color: #fff8dc;
+	border-collapse: collapse;
+	-webkit-box-shadow: 7px 7px 23px -4px rgba(0,0,0,0.75);
+	-moz-box-shadow: 7px 7px 23px -4px rgba(0,0,0,0.75);
+	box-shadow: 7px 7px 23px -4px rgba(0,0,0,0.75);
+}
+/* table, td, th { */
+td {
+	border: 1px solid #cccccc;
+	padding: 5px;
+}
+table th {
+	text-align: center;
+}
+th {
+	text-align: left;
+  padding: 0.5em;
+}
+tr:nth-child(even):not(#pTable tr) {
+	background-color: #E8ECED;
+}

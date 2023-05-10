@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- TODO: try background with blur -->
+    <link rel="stylesheet" href="/stylesheets/_header.css">
+    <base href="../" target="_parent">
+    <title></title>
+  </head>
+  <body>
+    <div class="header">
+      <a href="#" class="logo"><img src="images/xml-svgrepo-com.svg" alt="CompanyLogo"></a>
+      <div class="header-right">
+        <a href="/">Home</a>
+        <a href="https://www.youtube.com/playlist?list=PLK7sa90aSLe74eFKxktrvzMeXA1zilxaT" target="_blank">Tutorial</a>
+        <a class="active" href="#about">About</a>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var anchorsHeader = document.querySelectorAll(".header-right a");
+
+      anchorsHeader.forEach(a => {
+        a.addEventListener("click", (e) =>{
+          anchorsHeader.forEach((sibling) => {
+            if (sibling !== e.target) {
+              sibling.classList.remove("active")
+            }
+          });
+
+          e.target.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

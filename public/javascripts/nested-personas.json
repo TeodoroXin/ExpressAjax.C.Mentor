@@ -1,0 +1,37 @@
+{
+	"Lucero": {
+		"nombre" : "Lucero",
+		"apellido" : "Gomez",
+		"edad" : 32
+	},
+	"Juan": {
+		"nombre" : "Juan",
+		"apellido" : "Carrazco",
+		"edad" : 33
+	},
+	"Esther": {
+		"nombre" : "Esther",
+		"apellido" : "Ochoa",
+		"edad" : 23
+	},
+	"Ruben": {
+		"nombre" : "Ruben",
+		"apellido" : "Espinoza",
+		"edad" : 26
+	},
+	"Cacio": {
+		"nombre" : "Cacio",
+		"apellido" : "Rocha",
+		"edad" : 21
+	},
+	"Ruben": {
+		"nombre" : "Ruben",
+		"apellido" : "Espinoza",
+		"edad" : 26
+	},
+	"Jaime": {
+		"nombre" : "Jaime",
+		"apellido" : "Escalante",
+		"edad" : 28
+	}
+}

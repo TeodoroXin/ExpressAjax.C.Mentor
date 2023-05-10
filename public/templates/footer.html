@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/stylesheets/_footer.css">
+    <base href="../" target="_parent">
+    <title></title>
+  </head>
+  <body>
+    <div class="lower_menu">
+      <a href="#"><span>Lección Anterior</span></a>
+      <a href="#"><span>Lección Siguiente</span></a>
+    </div>
+  </body>
+  <script type="text/javascript">
+    var currentPath = window.parent.document.baseURI.substr(-2)
+    var parsedPath = parseInt(currentPath);
+    var menuA = document.querySelectorAll("div a");
+    var prevPage = parsedPath-1;
+    var nextPage = parsedPath+1;
+    var routesMap;
+		var xmlhttp;
+
+    function getPublicPaths() {
+      if (prevPage < 10) { prevPage = "0" + prevPage; }
+      if (nextPage < 10) { nextPage = "0" + nextPage; }
+			if (window.XMLHttpRequest) {
+				xmlhttp = new XMLHttpRequest();
+			} else {
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			xmlhttp.onreadystatechange = function(){
+				if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
+					let paths = Object.keys(JSON.parse(xmlhttp.responseText))
+          prevPage = (paths.includes(""+prevPage)) ? prevPage: "/";
+          nextPage = (paths.includes(""+nextPage)) ? nextPage: "/";
+        }
+        menuA[0].setAttribute("href", prevPage)
+        menuA[1].setAttribute("href", nextPage)
+			}
+			xmlhttp.open("GET", "cadena?nombre=marc0", true)
+			xmlhttp.send()
+		}
+    getPublicPaths();
+  </script>
+</html>
