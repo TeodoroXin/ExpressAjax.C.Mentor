@@ -136,12 +136,12 @@ app.ejecutarNuevaVentana = function(){
   , nuevaVentana = document.getElementById('nuevaVentana');
 
   overlay.style.opacity = 0.5;
-  if (overlay.style.display == "") {
+  if (overlay.style.display == "block") {
     overlay.style.display = "none";
     nuevaVentana.style.display = "none";
   } else {
-    overlay.style.display = "";
-    nuevaVentana.style.display = "";
+    overlay.style.display = "block";
+    nuevaVentana.style.display = "block";
   }
   // Asegura  que los valores de la nueva ventana estén vacíos.
   document.getElementById('nuevoUsuarioID').value = "";
